@@ -1,0 +1,18 @@
+--silicon_version=mspx 
+-g 
+-O2 
+--define=__CCE__ --define=ISM_US 
+--diag_warning=225 
+--call_assumptions=0 
+--gen_opt_info=2 
+--printf_support=minimal 
+-z 
+-m"ez430_chronos.map" 
+--stack_size=80 
+--heap_size=80 
+--use_hw_mpy=F5 
+--warn_sections 
+-i"C:/Program Files/Texas Instruments/ccsv4/msp430/include" -i"C:/Program Files/Texas Instruments/ccsv4/tools/compiler/msp430/lib" -i"C:/Program Files/Texas Instruments/ccsv4/tools/compiler/msp430/include" 
+--reread_libs 
+--rom_model 
+"./driver/buzzer.obj" "./logic/user.obj" "./logic/test.obj" "./logic/temperature.obj" "./logic/stopwatch.obj" "./logic/rfsimpliciti.obj" "./logic/rfbsl.obj" "./logic/menu.obj" "./logic/date.obj" "./logic/clock.obj" "./logic/bluerobin.obj" "./logic/battery.obj" "./logic/altitude.obj" "./logic/alarm.obj" "./logic/acceleration.obj" "./main.obj" -l"rts430x.lib" "../simpliciti/CC430_End_Device_915MHz.lib" "../lnk_cc430f6137.cmd" "../driver/ez430_chronos_drivers.lib" "../bluerobin/BlueRobin_RX_915MHz.lib" 
